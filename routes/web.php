@@ -12,6 +12,5 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/user/{name}', function ($name) { return 'My name is '.$name;
-});
+use App\Http\Controllers\WelcomeController;
+Route::get('/hello', [WelcomeController::class,'hello']);
