@@ -12,6 +12,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-use App\Http\Controllers\PhotoController;
-
-Route::resource('photos', PhotoController::class);
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Amilil']);
+});
